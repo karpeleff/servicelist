@@ -5,36 +5,41 @@
 
     <div class="container">
 
-
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-      
+       
+       
+        
     
-
-<form action="/search" method="post"  >
-                     
-                     {{csrf_field()}}  
+      @foreach ($data as $row)
       
-      
-      
-       <div class="input-group">
-      <input type="text" class="form-control"  name="search"  placeholder="Поиск по устройству...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="sybmit">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-    
-     </form>
-    
+   	<div class="panel panel-danger">
 		
-		</div>
+		 <div class="panel-heading">
+    <h3 class="panel-title">Task № {{$row->id}} ON WORK</h3>
+  </div>
+  <div class="panel-body">
+  
+  <ul class="list-group">
+  <li class="list-group-item">TEL: {{$row->tel}} </li>
+  <li class="list-group-item">GADGET: {{$row->device}}</li>
+  <li class="list-group-item">TROUBLE: {{$row->trouble}}</li>
+  <li class="list-group-item">PRICE: {{$row->price}}</li>
+  <li class="list-group-item">DESC: {{$row->desc}}</li>
+</ul>
+   <button type="button" class="btn btn-success">Done!</button>
+  </div>
+  
+  </div>
+      
+     @endforeach
+		
 	
-		</div>
-		
-		
-      </div>
-
-    </div> <!-- /container -->
+  			
+    </div>
+	  </div>
+	    </div>
+           </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

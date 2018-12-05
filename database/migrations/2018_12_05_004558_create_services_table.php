@@ -21,6 +21,7 @@ class CreateServicesTable extends Migration
             $table->text('trouble');
             $table->text('price');
             $table->text('desc');
+            $table->text('status');
         });
     }
 

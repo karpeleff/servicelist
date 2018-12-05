@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/service', 'Service\ServiceController@index')->name('service');
-Route::get('/search', 'Service\ServiceController@search')->name('search');
-Route::get('/add', 'Service\ServiceController@add')->name('add');
+Route::match(['get', 'post'],'/search', 'Service\ServiceController@search')->name('search');
+Route::match(['get', 'post'],'/add', 'Service\ServiceController@add')->name('add');
 
