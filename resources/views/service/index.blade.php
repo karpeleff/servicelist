@@ -12,6 +12,7 @@
       
       @if (count($data) === 0)
  <h3>нет записей</h3> 
+ <h3><a href="{{ URL::asset('/add') }}">Добавить ?</a></h3>
 @endif
      
     
