@@ -17,10 +17,10 @@
     
       @foreach ($data as $row)
       
-   	<div class="panel panel-danger">
+   	<div class="panel panel-success">
 		
 		 <div class="panel-heading">
-    <h3 class="panel-title">Task № {{$row->id}} ON WORK</h3>
+    <h3 class="panel-title">Task № {{$row->id}} DONE!</h3>
   </div>
   <div class="panel-body">
   
@@ -31,12 +31,6 @@
   <li class="list-group-item">PRICE: {{$row->price}}</li>
   <li class="list-group-item">DESC: {{$row->desc}}</li>
 </ul>
-
-<form action="/update" method="post" >
-{{csrf_field()}}
-<input  type="hidden"  name="id" value="{{$row->id}}" />
- <button type="sybmit" class="btn btn-success">Done!</button>
-</form>
   
   </div>
   

@@ -47,9 +47,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li ><a href="service">Main</a></li>
-            <li><a href="search">Search</a></li>
-            <li class="active"  ><a href="add">New task</a></li>
+            <li ><a href="/service">Main</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/add">New task</a></li>
+            <li><a href="/done">Done</a></li>
           
           </ul>
          

@@ -21,4 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/service', 'Service\ServiceController@index')->name('service');
 Route::match(['get', 'post'],'/search', 'Service\ServiceController@search')->name('search');
 Route::match(['get', 'post'],'/add', 'Service\ServiceController@add')->name('add');
-
+Route::get('/done', 'Service\ServiceController@done')->name('done');
+Route::post('/update', 'Service\ServiceController@update')->name('update');
