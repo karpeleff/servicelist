@@ -7,13 +7,11 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-      
-      
-      
+     
       @if (count($data) === 0)
- <h3>нет записей</h3> 
+ <h3>Нет записей</h3> 
  <h3><a href="{{ URL::asset('/add') }}">Добавить ?</a></h3>
-@endif
+     @endif
      
     
       @foreach ($data as $row)
@@ -21,7 +19,8 @@
    	<div class="panel panel-danger">
 		
 		 <div class="panel-heading">
-    <h3 class="panel-title">Task № {{$row->id}} ON WORK</h3>
+    <h3 class="panel-title">Task № {{$row->id}} ON WORK create:{{$row->created_at}} </h3>
+    
   </div>
   <div class="panel-body">
   
@@ -37,7 +36,10 @@
 {{csrf_field()}}
 <input  type="hidden"  name="id" value="{{$row->id}}" />
  <button type="sybmit" class="btn btn-success">Done!</button>
+  
 </form>
+ 
+ 
   
   </div>
   
