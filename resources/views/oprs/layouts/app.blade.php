@@ -51,10 +51,24 @@
             <li ><a href="/service">Main</a></li>
             <li><a href="/search">Energy</a></li>
             <li><a href="/add">Diesel</a></li>
-            <li><a href="/done">Docs</a></li>
-          
-          </ul>
+            <li><a href="/done">Docs</a></li>          
          
+          
+           <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ГСМ <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Бензин приход</a></li>
+                <li><a href="#">Бензин расход</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Диз.топливо приход</a></li>
+                  <li><a href="#">Диз.топливо расход</a></li>
+                              <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+           </ul>
+       
         </div><!--/.nav-collapse -->
       </div>
     </nav>
