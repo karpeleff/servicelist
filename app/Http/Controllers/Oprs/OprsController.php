@@ -28,9 +28,7 @@ class OprsController extends Controller
         $last = Energy::orderby('id', 'desc')->first();
         
         $mons = $this->mydate(2);
-        
-       
-         
+                
        
        if ($this->request->counter == null)
         {                       
