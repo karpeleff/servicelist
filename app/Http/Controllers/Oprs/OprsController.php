@@ -71,6 +71,24 @@ class OprsController extends Controller
     }
     
     
+    public   function addgsm()
+    {
+        
+        if ($this->request->counter == null)
+        {                       
+           return view('oprs.addgsm');         
+        }
+        
+      // echo  $this->request->counter;
+      
+      dd();
+      
+      
+        
+        
+        
+    }
+    
     
     
 }
