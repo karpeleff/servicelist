@@ -31,3 +31,4 @@ Route::post('/update', 'Service\ServiceController@update')->name('update');
 Route::match(['get', 'post'],'/energy', 'Oprs\OprsController@energy')->name('energy');
 Route::match(['get', 'post'],'/addgsm', 'Oprs\OprsController@addgsm')->name('addgsm');
 Route::get('/oprs/test','Oprs\DocsController@test');
+Route::match(['get', 'post'],'/writeoffgsm/{type}/{vol}', 'Oprs\OprsController@writeoffgsm')->name('writeoffgsm');

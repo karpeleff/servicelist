@@ -24,13 +24,13 @@
             
          <!-- Group of default radios - option 1 -->
 <div class="custom-control custom-radio">
-  <input type="radio" class="custom-control-input" id="" name="dizt"   checked>
+  <input type="radio" class="custom-control-input" id="" name="fuel" value="dizt"  checked>
   <label class="custom-control-label" for="defaultGroupExample1">Дизельное топливо</label>
 </div>
 
 <!-- Group of default radios - option 2 -->
 <div class="custom-control custom-radio">
-  <input type="radio" class="custom-control-input" id="" name="benz" >
+  <input type="radio" class="custom-control-input" id="" name="fuel"  value="benz"  >
   <label class="custom-control-label" for="defaultGroupExample2">Бензин</label>
 </div>
 	  	  </div>
@@ -49,8 +49,8 @@
   <br />
  
 <label for="phone" class="col-sm-2 control-label">Остаток</label>      
-<label for="phone" class="col-sm-2 control-label">Дизтопливо : 100 л   </label>
-<label for="phone" class="col-sm-2 control-label">Бензин : 43л  </label> 	 			
+<label for="phone" class="col-sm-2 control-label">Дизтопливо : {{$dizt->balance}}  л  </label>
+<label for="phone" class="col-sm-2 control-label">Бензин : {{$benz->balance}} л  </label> 	 			
     </div>
 	  </div>
 	    </div>

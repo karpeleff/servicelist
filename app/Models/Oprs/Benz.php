@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models\Oprs;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Dizt extends Model
+class Benz extends Model
 {
     //
 }

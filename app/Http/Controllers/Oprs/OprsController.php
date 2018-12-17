@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Oprs;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Oprs\Energy;
+use App\Models\Oprs\Benz;
+use App\Models\Oprs\Dizt;
+
 
 class OprsController extends Controller
 {
@@ -70,25 +73,89 @@ class OprsController extends Controller
         
     }
     
-    
+  
+  
     public   function addgsm()
     {
         
+       // $benz  =   Benz::latest()->first();
+       // $dizt  =   Dizt::latest()->first();
+        
+        
+         // $record = new Benz;
+         // $record->balance = 0;
+         // $record->save();
+        
+        
+        
+        //  $record = new Dizt;
+         // $record->balance = 0;
+         // $record->save();
+        
+        
+        $benz  =   Benz::latest()->first();
+        $dizt  =   Dizt::latest()->first();
+        
+       // echo $benz->receipt;
+     // $this->getbalance();  
+        
         if ($this->request->counter == null)
         {                       
-           return view('oprs.addgsm');         
+           return view('oprs.addgsm',array('benz' =>$benz,'dizt'=>$dizt));         
         }
         
-      // echo  $this->request->counter;
+     // echo  $this->request->counter;
       
-      dd();
+     // echo  $this->request->fuel;
       
-      
-        
-        
+    if( $this->request->fuel== 'benz')
+    {
+       $record = new Benz;
+       $record->receipt = $this->request->counter;
+        $record->balance = $benz->balance + $this->request->counter;
+        $record->save();        
         
     }
+     else
+     {
+        $record = new Dizt;
+        $record->receipt = $this->request->counter;
+        $record->balance = $dizt->balance + $this->request->counter;
+        $record->save();
+      }
+      
+       
+        $benz  =   Benz::latest()->first();
+        $dizt  =   Dizt::latest()->first(); 
+        
+       return view('oprs.addgsm',array('benz' =>$benz,'dizt'=>$dizt));  
+    }
     
-    
+    public  function writeoffgsm($type,$vol)
+    {
+        
+      
+       if($type == 'dizt') 
+       
+       {
+         $dizt  =   Dizt::latest()->first();        
+         $record = new Dizt;
+         $record->consumption = $vol;
+         $record->balance = $dizt->balance - $vol;
+         $record->save();
+                
+       }  
+       else
+       {
+        
+         $benz  =   Benz::latest()->first();
+         $record = new Benz;
+         $record->consumption = $vol;
+         $record->balance = $benz->balance - $vol;
+         $record->save();
+         
+       }
+                         
+    }
     
 }
