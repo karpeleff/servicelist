@@ -32,3 +32,5 @@ Route::match(['get', 'post'],'/energy', 'Oprs\OprsController@energy')->name('ene
 Route::match(['get', 'post'],'/addgsm', 'Oprs\OprsController@addgsm')->name('addgsm');
 Route::get('/oprs/test','Oprs\DocsController@test');
 Route::match(['get', 'post'],'/writeoffgsm/{type}/{vol}', 'Oprs\OprsController@writeoffgsm')->name('writeoffgsm');
+Route::match(['get', 'post'],'/dizelwork', 'Oprs\OprsController@dizelwork')->name('dizelwork');
+Route::match(['get', 'post'],'/getperiod', 'Oprs\OprsController@getperiod')->name('getperiod');
