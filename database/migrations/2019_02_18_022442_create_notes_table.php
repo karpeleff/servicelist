@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiztsTable extends Migration
+class CreateNotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateDiztsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dizts', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
-            $table->float('balance', 8, 2);
-             $table->float('receipt', 8, 2);
-             $table->float('consumption', 8, 2);
+            $table->text('note');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateDiztsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dizts');
+        Schema::dropIfExists('notes');
     }
 }

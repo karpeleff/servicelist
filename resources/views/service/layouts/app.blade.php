@@ -52,7 +52,30 @@
             <li><a href="/add">New task</a></li>
             <li><a href="/done">Done</a></li>
           
-          </ul>
+       
+          
+     <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">All</a></li>
+          <li><a href="/addnote">Add</a></li>
+          <li><a href="/searchnote">Search</a></li>
+        </ul>
+      </li>
+          
+           </ul>  
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
          
         </div><!--/.nav-collapse -->
       </div>
