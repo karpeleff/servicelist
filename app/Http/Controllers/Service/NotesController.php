@@ -57,7 +57,7 @@ class NotesController extends Controller
 
         $search = $this->request->search;
 
-        $data = Service::where('device', 'like', '%' . $search . '%')->get();
+        $data = Note::where('device', 'like', '%' . $search . '%')->get();
 
 
         return view('service.notesresult', array('data' => $data));
