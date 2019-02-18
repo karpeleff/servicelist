@@ -8,23 +8,14 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
        
-	<br>
+@foreach ($data as $row)
+
+
+<div class="well well-sm">{{ $row->note }}</div>
+
+ @endforeach
     
-     <form action="/addnote" method="post"  >
-                     
-                     {{csrf_field()}}
-    
-
-<div class="form-group">
-  <label for="comment">New note:</label>
-  <textarea class="form-control" rows="5"   name="note" id="comment"></textarea>
-</div>
-
-
-<br>	
-<button type="submit" class="btn btn-success">Add</button>	
-	
-   </form>	
+  {{ $data->links() }}
 	
 	
   </div><!-- /.col-lg-6 -->

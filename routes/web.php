@@ -27,3 +27,4 @@ Route::post('/update', 'Service\ServiceController@update')->name('update');
 
 //Notes
 Route::match(['get', 'post'],'/addnote', 'Service\NotesController@add')->name('addnote');
+Route::match(['get', 'post'],'/allnotes', 'Service\NotesController@all')->name('allnotes');

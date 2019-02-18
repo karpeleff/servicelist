@@ -58,7 +58,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">All</a></li>
+          <li><a href="/allnotes">All</a></li>
           <li><a href="/addnote">Add</a></li>
           <li><a href="/searchnote">Search</a></li>
         </ul>
