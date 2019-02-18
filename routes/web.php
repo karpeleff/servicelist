@@ -25,12 +25,3 @@ Route::match(['get', 'post'],'/add', 'Service\ServiceController@add')->name('add
 Route::get('/done', 'Service\ServiceController@done')->name('done');
 Route::post('/update', 'Service\ServiceController@update')->name('update');
 
-//Oprs
-
- Route::match(['get', 'post'],'/oprs', 'Oprs\OprsController@index')->name('oprs');
-Route::match(['get', 'post'],'/energy', 'Oprs\OprsController@energy')->name('energy');
-Route::match(['get', 'post'],'/addgsm', 'Oprs\OprsController@addgsm')->name('addgsm');
-Route::get('/oprs/test','Oprs\DocsController@test');
-Route::match(['get', 'post'],'/writeoffgsm/{type}/{vol}', 'Oprs\OprsController@writeoffgsm')->name('writeoffgsm');
-Route::match(['get', 'post'],'/dizelwork', 'Oprs\OprsController@dizelwork')->name('dizelwork');
-Route::match(['get', 'post'],'/getperiod', 'Oprs\OprsController@getperiod')->name('getperiod');
