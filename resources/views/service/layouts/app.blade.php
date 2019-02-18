@@ -60,7 +60,7 @@
         <ul class="dropdown-menu">
           <li><a href="/allnotes">All</a></li>
           <li><a href="/addnote">Add</a></li>
-          <li><a href="/searchnote">Search</a></li>
+          <li><a href="/searchnotes">Search</a></li>
         </ul>
       </li>
           

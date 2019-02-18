@@ -9,7 +9,9 @@ class NotesController extends Controller
 {
     
      protected $request;
-    public function __construct(Request $request)
+     
+     public function __construct(Request $request)
+     
     {
         $this->request = $request;
     }
@@ -29,7 +31,7 @@ class NotesController extends Controller
 
           $record->save();
 
-        return view('service.addnote');        
+          return view('service.addnote');        
         
     }
     
@@ -42,6 +44,36 @@ class NotesController extends Controller
       
      return view('service.allnotes', array('data' => $data));
   }  
+    
+    
+    public   function search()
+    {
+        
+         if ($this->request->search == null)
+        {
+            return view('service.notessearch');
+        }
+
+
+        $search = $this->request->search;
+
+        $data = Service::where('device', 'like', '%' . $search . '%')->get();
+
+
+        return view('service.notesresult', array('data' => $data));
+
+
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }
