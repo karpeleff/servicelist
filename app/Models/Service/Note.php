@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Oprs;
+namespace App\Models\Service;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Energy extends Model
+class Note extends Model
 {
     //
 }
