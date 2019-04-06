@@ -80,7 +80,7 @@ class NotesController extends Controller
 
        // $this->all();
 
-        return redirect()->route('allnotes');
+        return redirect('allnotes');
     }
     
     
