@@ -26,6 +26,7 @@ Route::get('/done', 'Service\ServiceController@done')->name('done');
 Route::post('/update', 'Service\ServiceController@update')->name('update');
 
 //Notes
+Route::post('/dellnote','Service\NotesController@dellnote')->name('dellnote');
 Route::match(['get', 'post'],'/addnote', 'Service\NotesController@add')->name('addnote');
 Route::match(['get', 'post'],'/allnotes', 'Service\NotesController@all')->name('allnotes');
 Route::match(['get', 'post'],'/searchnotes', 'Service\NotesController@search')->name('searchnotes');

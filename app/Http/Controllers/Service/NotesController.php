@@ -68,7 +68,20 @@ class NotesController extends Controller
     }
     
     
-    
+    public function dellnote()
+    {
+
+       // dd($this->request);
+        $id =  $this->request->id;
+
+        $action = Note::find($id);
+
+        $action->delete();
+
+       // $this->all();
+
+        return redirect()->route('allnotes');
+    }
     
     
     
