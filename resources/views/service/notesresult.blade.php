@@ -14,7 +14,7 @@
       @foreach ($data as $row)
       
   <div class="well well-sm">{{ $row->note }}</div>
-              <button type="button" class="btn btn-warning">Warning</button>
+
       
      @endforeach
 		
