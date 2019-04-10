@@ -9,6 +9,8 @@
       <div class="jumbotron">
        
 	<br>
+
+          <div class="well well-sm">Прием заявки от клиента</div>
     
      <form action="/add" method="post"  >
                      
@@ -35,13 +37,13 @@
 
 <br>
 <div class="input-group">
-  <span class="input-group-addon" id="basic-addon3">PRICE:</span>
+  <span class="input-group-addon" id="basic-addon3">PRICE:(примерно)</span>
   <input type="text" class="form-control" name="price"  >
 </div>
 
 <br>
 <div class="input-group">
-  <span class="input-group-addon" id="basic-addon3">DESC:</span>
+  <span class="input-group-addon" id="basic-addon3">DESC:(imei и тд)</span>
   <input type="text" class="form-control" name="desc"  >
 </div>
 <br>	

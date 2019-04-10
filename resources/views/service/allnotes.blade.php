@@ -19,7 +19,7 @@
 @foreach ($data as $row)
 
 
-<div class="well well-sm">{{ $row->note }}</div>
+<div class="well well-sm">{{ $row->note }}  </div>
 
               <form action="/dellnote" method="post">
                   {{csrf_field()}}

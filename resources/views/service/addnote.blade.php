@@ -13,8 +13,6 @@
      <form action="/addnote" method="post"  >
                      
                      {{csrf_field()}}
-    
-
 <div class="form-group">
   <label for="comment">New note:</label>
   <textarea class="form-control" rows="5"   name="note" id="comment"></textarea>

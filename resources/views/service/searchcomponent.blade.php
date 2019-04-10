@@ -5,27 +5,36 @@
 
     <div class="container">
 
+
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-
-        @if(count($data) === 0)
-          <h4> совпадений нет<h4/>
-            @endif
-        
+      
     
-      @foreach ($data as $row)
-      
-  <div class="well well-sm">{{ $row->note }}</div>
 
+<form action="/searchcomponent  " method="get"  >
+                     
+                     {{csrf_field()}}  
       
-     @endforeach
+      
+      
+       <div class="input-group">
+      <input type="text" class="form-control"  name="component"  placeholder="Поиск  элемента...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="sybmit">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+    
+     </form>
+    
 		
+		</div>
 	
-  			
-    </div>
-	  </div>
-	    </div>
-           </div> <!-- /container -->
+		</div>
+		
+		
+      </div>
+
+    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

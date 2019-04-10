@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Service List</a>
+          <a class="navbar-brand" href="/">Service List</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -51,8 +51,17 @@
             <li><a href="/search">Search</a></li>
             <li><a href="/add">New task</a></li>
             <li><a href="/done">Done</a></li>
-          
-       
+
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Storage
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/storecomponent">AddComponent</a></li>
+                <li><a href="/searchcomponent">SearchComponent</a></li>
+              </ul>
+            </li>
+
           
      <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes
