@@ -28,6 +28,33 @@ class ServiceController extends Controller
     }
 
 
+
+    public  function towork()
+    {
+        $id = $this->request->id;
+        $data = Service::where('id',$id)->get();
+        return view('service.onwork', array('data' => $data));
+
+
+    }
+
+
+     public  function  donwork()
+     {
+
+
+
+     }
+
+
+
+
+
+
+
+
+
+
     public function search()
     {
 

@@ -27,7 +27,7 @@
   <li class="list-group-item">PRICE: {{$row->price}}</li>
   <li class="list-group-item">DESC: {{$row->desc}}</li>
 </ul>
-   <button type="button" class="btn btn-success">Done!</button>
+   <button type="button" class="btn btn-success"> on Work  </button>
   </div>
   
   </div>

@@ -32,10 +32,10 @@
   <li class="list-group-item">DESC: {{$row->desc}}</li>
 </ul>
 
-<form action="/update" method="post" >
+<form action="/towork" method="post" >
 {{csrf_field()}}
 <input  type="hidden"  name="id" value="{{$row->id}}" />
- <button type="sybmit" class="btn btn-success">Done!</button>
+ <button type="sybmit" class="btn btn-success">  в работу</button>
   
 </form>
  

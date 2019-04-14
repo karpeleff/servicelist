@@ -25,9 +25,16 @@ Route::match(['get', 'post'],'/add', 'Service\ServiceController@add')->name('add
 Route::get('/done', 'Service\ServiceController@done')->name('done');
 Route::post('/update', 'Service\ServiceController@update')->name('update');
 //Route::resource('component', 'Service\ComponentController');
+//Components
 Route::match(['get', 'post'],'/searchcomponent', 'Service\ComponentController@search')->name('search');
 Route::get('/storecomponent', 'Service\ComponentController@index')->name('index');
 Route::post('/storecomponent', 'Service\ComponentController@store')->name('store');
+
+//towork
+Route::post('/towork', 'Service\ServiceController@towork')->name('towork');
+
+
+
 
 //Notes
 Route::post('/dellnote','Service\NotesController@dellnote')->name('dellnote');
