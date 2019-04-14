@@ -53,8 +53,8 @@ class ComponentController extends Controller
 
         $validator = Validator::make($this->request->all(), [
             'item' => 'required',
-            'storage' => 'required',
-            'amount' =>  'numeric | required'
+            'storage' => 'required'
+
         ]);
 
 
