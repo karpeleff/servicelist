@@ -14,7 +14,7 @@ class NotesController extends Controller
      
     {
         $this->request = $request;
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
     
     
