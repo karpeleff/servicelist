@@ -47,7 +47,7 @@
                  <div class="input-group">
                      <input type="text" class="form-control" placeholder="Add components">
                      <span class="input-group-btn">
-                 <button class="btn btn-default" type="button">Search</button>
+                 <button class="btn btn-default" type="button"  onclick="showModalWin()  >Search</button>
       </span>
                  </div>
 
@@ -67,6 +67,25 @@
 
 
          </div>
+<!-- modal -->
+
+                  <script type="text/javascript">
+                      function showModalWin() {
+
+                          var darkLayer = document.createElement('div'); // слой затемнения
+                          darkLayer.id = 'shadow'; // id чтобы подхватить стиль
+                          document.body.appendChild(darkLayer); // включаем затемнение
+
+                          var modalWin = document.getElementById('popupWin'); // находим наше "окно"
+                          modalWin.style.display = 'block'; // "включаем" его
+
+                          darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
+                              darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
+                              modalWin.style.display = 'none'; // делаем окно невидимым
+                              return false;
+                          };
+                      }
+                  </script>
 
 	
 	
