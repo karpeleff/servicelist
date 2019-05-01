@@ -81,6 +81,10 @@ class ServiceController extends Controller
             return view('service.add');
         }
 
+          //dd($this->request);
+        //break;
+
+
 
         $record = new Service;
 
@@ -94,7 +98,11 @@ class ServiceController extends Controller
 
         $record->desc = $this->request->desc;
 
-        $record->status = 'work';
+        $record->type = $this->request->type;
+
+        $record->model = $this->request->model;
+
+        $record->status = 'new';
 
         $record->save();
 

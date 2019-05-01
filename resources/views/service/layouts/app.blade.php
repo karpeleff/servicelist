@@ -75,20 +75,65 @@
           
            </ul>  
           
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-         
+     
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-  @yield('content')  
+
+
+ <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+
+
+        <div class="container-fluid">
+        <div class="row"> 
+ <main  class="col-md-8">
+
+  @yield('content') 
+ </main>
+   <aside id="" class="col-md-4">
+
+ <div class="panel panel-primary">
+<div class="panel-heading">
+Модуль статистики : Заказы 
+</div>
+<div class="panel-body">
+
+Новый:
+<br>
+В работе:
+<br>
+Готов:
+
+<br>
+Выдан:
+</div>
+
+    
+</div>
+</aside>
+ 
+  
+    </div>
+    </div>
+
+</div>
+</div>
+<!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+ 
     
     
