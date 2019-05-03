@@ -75,7 +75,7 @@ class ComponentController extends Controller
             $record->storage = $this->request->storage;
             $record->count = $this->request->count;
             $record->price = $this->request->price;
-            $record->img = 'img';
+            $record->img = '123';
             $record->save();
 
 
