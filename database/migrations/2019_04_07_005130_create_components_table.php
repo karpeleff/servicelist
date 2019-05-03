@@ -22,6 +22,7 @@ class CreateComponentsTable extends Migration
             $table->integer('count'); // количество на складе
             $table->integer('img'); //ссылка  на изображение
             $table->timestamps();
+            $table->double('price', 8, 2);
         });
     }
 

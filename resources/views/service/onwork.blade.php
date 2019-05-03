@@ -26,7 +26,7 @@
                  <br>
                  <div class="input-group">
                      <span class="input-group-addon" id="basic-addon3">Комментарии:  </span>
-                  
+
                      <input type="text" class="form-control" name="desc" value="{{$row->desc}}" >
                  </div>
                      <br>

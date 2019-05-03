@@ -22,6 +22,9 @@ class CreateServicesTable extends Migration
             $table->text('price');
             $table->text('desc');
             $table->text('status');
+            $table->text('model');
+            $table->enum('type', ['платный ', 'гарантийный']);
+            $table->text('imei');
         });
     }
 
