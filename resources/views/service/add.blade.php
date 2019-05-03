@@ -14,8 +14,8 @@
          <div class="form-group">
              <label for="sel1">Тип ремонта</label>
              <select class="form-control" id="sel1" name="type">
-                 <option  value="pay">платный</option>
-                 <option  value="warranty"   >гарантийный</option>
+                 <option  value="платный">платный</option>
+                 <option  value="гарантийный"   >гарантийный</option>
              </select>
          </div>
     
