@@ -38,7 +38,7 @@
          <br>
          <div class="input-group">
              <span class="input-group-addon" id="basic-addon3">S/N ; imei</span>
-             <input type="text" class="form-control" name="desc"  >
+             <input type="text" class="form-control" name="imei"  >
          </div>
 
 <br>

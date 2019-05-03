@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Service\Service;
 
+
 class ServiceController extends Controller
 {
 
@@ -21,38 +22,49 @@ class ServiceController extends Controller
 
         //$data = Service::paginate(5);
         
-        $data = Service::where('status','work')->get();
+        $data = Service::where('status','new')->get();
 
         return view('service.index', array('data' => $data));
 
     }
 
+public  function  onwork()
+{
+    $data = Service::where('status','work')->get();
+
+    return view('service.allwork', array('data' => $data));
+
+}
 
 
     public  function towork()
     {
         $id = $this->request->id;
+
         $data = Service::where('id',$id)->get();
+
+        $record = Service::find($id);
+
+        $record->status = 'work';
+
+        $record->save();
+
         return view('service.onwork', array('data' => $data));
 
 
     }
 
 
-     public  function  donwork()
+     public  function  out()
      {
+         $id = $this->request->id;
+         $record = Service::find($id);
+         $record->status  = 'out';
+         $record->save();
 
-
+         return $this->done();
 
      }
-
-
-
-
-
-
-
-
 
 
     public function search()
@@ -68,7 +80,6 @@ class ServiceController extends Controller
 
         $data = Service::where('device', 'like', '%' . $search . '%')->get();
 
-
         return view('service.result', array('data' => $data));
 
 
@@ -80,11 +91,6 @@ class ServiceController extends Controller
         {
             return view('service.add');
         }
-
-          //dd($this->request);
-        //break;
-
-
 
         $record = new Service;
 
@@ -102,24 +108,35 @@ class ServiceController extends Controller
 
         $record->model = $this->request->model;
 
+        $record->imei = $this->request->imei;
+
+
         $record->status = 'new';
 
         $record->save();
 
-        return view('service.add');
+       // return view('service.add');
+
+        return $this->index();
 
     }
  
     public function  update()
     {
-        
+       // dd($this->request);
+
         $id = $this->request->id;
         
-      $record = Service::find($id);
+        $record = Service::find($id);
 
-      $record->status = 'done';
+        $record->status  = $this->request->radio ;// status
 
-      $record->save(); 
+        $record->price = $this->request->price ;
+
+        $record->desc = $this->request->desc ;//заметки
+
+
+        $record->save();
       
     
     //  header("Location: http://newoprs/service");
@@ -129,15 +146,17 @@ class ServiceController extends Controller
 
  public function done()
     {
-
-        //$data = Service::paginate(5);
-        
         $data = Service::where('status','done')->get();
 
         return view('service.done', array('data' => $data));
-
     }
 
+    public function allout()
+    {
+        $data = Service::where('status','out')->get();
+
+        return view('service.out', array('data' => $data));
+    }
 
 
 

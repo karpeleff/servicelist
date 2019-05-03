@@ -74,6 +74,7 @@ class ComponentController extends Controller
             $record->datasheet = $this->request->datasheet;
             $record->storage = $this->request->storage;
             $record->count = $this->request->count;
+            $record->price = $this->request->price;
             $record->save();
 
 
@@ -161,4 +162,18 @@ class ComponentController extends Controller
     {
         //
     }
+
+    public  function allcomp()
+    {
+
+        $data = Component::paginate(5);
+
+
+        return view('service.allcomp', array('data' => $data));
+
+
+    }
+
+
+
 }

@@ -48,15 +48,18 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li ><a href="/service">Main</a></li>
-            <li><a href="/search">Search</a></li>
-            <li><a href="/add">New task</a></li>
+              <li><a href="/add">New task</a></li>
+              <li><a href="/onwork">On Work</a></li>
             <li><a href="/done">Done</a></li>
+              <li><a href="/allout">Out</a></li>
+              <li><a href="/search">Search</a></li>
 
 
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Storage
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                  <li><a href="/allcomponents">AllComponents</a></li>
                 <li><a href="/storecomponent">AddComponent</a></li>
                 <li><a href="/searchcomponent">SearchComponent</a></li>
               </ul>
@@ -101,17 +104,15 @@
 </div>
 <div class="panel-body">
 
-Новый:
+Новые: {{$count[1]}}
 <br>
-В работе:
+В работе: {{$count[0]}}
 <br>
-Готов:
-
+Готово:  {{$count[2]}}
 <br>
-Выдан:
+Выдано: {{$count[3]}}
 </div>
 
-    
 </div>
 </aside>
  

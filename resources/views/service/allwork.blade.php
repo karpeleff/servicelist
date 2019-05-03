@@ -11,10 +11,10 @@
     
       @foreach ($data as $row)
       
-   	<div class="panel panel-danger">
+   	<div class="panel panel-info ">
 		
 		 <div class="panel-heading">
-    <h3 class="panel-title">Task № {{$row->id}} STATUS NEW create:{{$row->created_at}} </h3>
+    <h3 class="panel-title">Заказ  № {{$row->id}} в работе  , заявка от : {{substr($row->created_at,0,7)}} </h3>
     
   </div>
   <div class="panel-body">
@@ -33,7 +33,7 @@
 <form action="/towork" method="post" >
 {{csrf_field()}}
 <input  type="hidden"  name="id" value="{{$row->id}}" />
- <button type="sybmit" class="btn btn-success">  в работу</button>
+ <button type="sybmit" class="btn btn-success">продолжить ремонт</button>
   
 </form>
    

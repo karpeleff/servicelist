@@ -6,7 +6,7 @@
 
       
       @if (count($data) === 0)
- <h3>нет готовых заказов</h3> 
+ <h3>нет записей</h3> 
 @endif
      
     
@@ -15,7 +15,7 @@
    	<div class="panel panel-success">
 		
 		 <div class="panel-heading">
-    <h3 class="panel-title">Task № {{$row->id}} DONE!</h3>
+    <h3 class="panel-title">Заказ  № {{$row->id}} выдан клиенту</h3>
   </div>
   <div class="panel-body">
   
@@ -29,17 +29,10 @@
   <li class="list-group-item">DESC: {{$row->desc}}</li>
 </ul>
 
-<form   method="post" action="/out" >
-  {{csrf_field()}}
-<input  type="hidden"  name="id" value="{{$row->id}}" />
-  <br>
-<button type="sybmit" class="btn btn-success">Выдать</button>
-  </div>
-  
 </div>
 
-
-  </form>     
+</div>
+       
      @endforeach
 		
 	

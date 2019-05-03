@@ -44,13 +44,22 @@
              <span class="input-group-addon" id="basic-addon3">Storage</span>
              <input type="text" class="form-control"  name="storage" placeholder="box_number" >
          </div>
+
+              <br>
+              <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon3">Цена</span>
+                  <input type="text" class="form-control"  name="price" placeholder="цена" >
+              </div>
+
+
+
          <br>
 
 <br>	
 <button type="submit" class="btn btn-success">Add Component</button>
 	
-   </form>	
+   </form>
 
-
+          <br>
 @endsection
 

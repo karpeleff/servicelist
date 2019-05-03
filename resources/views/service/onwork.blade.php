@@ -2,18 +2,12 @@
 
 
 @section('content')
+         @foreach ($data as $row)
 
-    <div class="container">
+          <div class="well well-sm">Карта девайса . Заказ №  {{$row->id}}  от {{substr($row->created_at,0,7)}} </div>
+          
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-       
-	<br>
 
-          <div class="well well-sm">Карта девайса</div>
-          <form action="/done" method="post" >
-
-          @foreach ($data as $row)
 
 
          <div class="panel-body">
@@ -22,91 +16,60 @@
                  <li class="list-group-item">TEL: {{$row->tel}} </li>
                  <li class="list-group-item">GADGET: {{$row->device}}</li>
                  <li class="list-group-item">TROUBLE: {{$row->trouble}}</li>
+                 <li class="list-group-item">s/n : {{$row->imei}}</li>
+              </ul>
+
+                 <br>
+
+                 <form method="post" action="/update" >
+
                  <br>
                  <div class="input-group">
-                     <span class="input-group-addon" id="basic-addon3">PRICE: итог</span>
-                     <input type="text" class="form-control" name="price"  value="{{$row->price}}">
-                 </div>
-                 <div class="input-group">
-                     <span class="input-group-addon" id="basic-addon3">DESC:(imei и тд)  </span>
+                     <span class="input-group-addon" id="basic-addon3">Комментарии:  </span>
+                  
                      <input type="text" class="form-control" name="desc" value="{{$row->desc}}" >
                  </div>
+                     <br>
+                     <div class="input-group">
+                         <span class="input-group-addon" id="basic-addon3">PRICE: итог</span>
+                         <input type="text" class="form-control" name="price"  value="{{$row->price}}">
+                     </div>
                  <br>
                  <div class="form-group">
                      <label for="sel1">Гарантия</label>
-                     <select class="form-control" id="sel1">
-                         <option>1 месяц</option>
-                         <option>3 месяца</option>
-                         <option>6 месяцев</option>
-                         <option>12 месяцев</option>
+                     <select class="form-control" id="sel1" name="warr" >
+                         <option  value="1" >1 месяц</option>
+                         <option value="3" >3 месяца</option>
+                         <option value="6" >6 месяцев</option>
+                         <option value="12" >12 месяцев</option>
                      </select>
                  </div>
-
+                </div>
 
                  <label for="sel1">Использованы элементы</label>
                  <div class="input-group">
                      <input type="text" class="form-control" placeholder="Add components">
                      <span class="input-group-btn">
-                 <button class="btn btn-default" type="button"  onclick="showModalWin()  >Search</button>
-      </span>
-                 </div>
+                 <button class="btn btn-default" type="button"   >Search</button>
+                  </div>
 
-
-             </ul>
-
-
-             @endforeach
-
-             <form action="/towork" method="post" >
+                  <div class="radio">
+                 <label><input type="radio" name="radio"  value="work" checked>В ремонте</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="radio"   value="done"  >Готово</label>
+                    </div>
+          <div class="checkbox">
+              <label><input type="checkbox"  name="sms" value="sms">Отправить СМС клиенту </label>
+          </div>
+             
                  {{csrf_field()}}
                  <input  type="hidden"  name="id" value="{{$row->id}}" />
-                 <button type="sybmit" class="btn btn-success">Done</button>
+               </br>
+                 <button type="sybmit" class="btn btn-success">Закрыть</button>
 
              </form>
-
-
-
-         </div>
-<!-- modal -->
-
-                  <script type="text/javascript">
-                      function showModalWin() {
-
-                          var darkLayer = document.createElement('div'); // слой затемнения
-                          darkLayer.id = 'shadow'; // id чтобы подхватить стиль
-                          document.body.appendChild(darkLayer); // включаем затемнение
-
-                          var modalWin = document.getElementById('popupWin'); // находим наше "окно"
-                          modalWin.style.display = 'block'; // "включаем" его
-
-                          darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
-                              darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
-                              modalWin.style.display = 'none'; // делаем окно невидимым
-                              return false;
-                          };
-                      }
-                  </script>
-
-	
-	
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-        </p>
-      </div>
-
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+@endforeach
 
 @endsection
 
